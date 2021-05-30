@@ -10,6 +10,26 @@
   </head>
 
   <body>
+    <header >
+      <div class="nav">
+        <div class="nav-title">Edfyi</div>
+        <%= form_with(url: "_path", local: true, method: :get, class: "search-form") do |form| %>
+          <%= form.text_field :keyword, placeholder: "投稿を検索する", class: "search-input" %>
+          <%= form.submit "検索", class: "search-btn" %>
+          
+        <% end %>
+        <%= link_to "投稿する", "_path", class: "nav-post" %>
+        <%= link_to "新規登録", "_path", class: "nav-new_registration" %>
+        <%= link_to "ログイン", "_path", class: "nav-login" %>
+
+      </div>
+
+    </header>
     <%= yield %>
+    <footer>
+      <p>
+        Copyright Edfyi 2021.
+      </p>
+    </footer>
   </body>
 </html>

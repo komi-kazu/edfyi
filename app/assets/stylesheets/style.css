@@ -1,0 +1,25 @@
+.nav{
+  height: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 26px;
+  background-color: #F1FFFA;
+
+}
+
+.search-form{
+  height: 30px;
+
+}
+
+.search-input{
+
+}
+
+.nav-post
+.av-new_registration 
+.nav-login{
+  text-decoration: none;
+}
