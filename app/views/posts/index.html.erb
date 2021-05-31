@@ -2,9 +2,10 @@
   <%= image_tag "b0472.png", :size => "300x300" %>
   <div class="home-container-text">
     <h1>教育は未来だ</h1>
-    <p>Edfyiは、学校教育に関する経験やノウハウを記録・共有するサービスです</p>
-    <p>日々の教育活動において、学びになったことや覚えておきたいことを</p>
-    <p>他の教育者と共有しましょう</p>
+    <p>Edfyiは、学校教育に関する経験やノウハウを記録・共有するサービスです。</p>
+    <p>日々の教育活動において、学びになったことや覚えておきたいことを他の</p>
+    <p>教育者と共有しましょう。</p>
+    <p>また、教育活動の中で困ったことがあったら質問してみましょう</p>
   </div>
   <%= image_tag "b0693.png", :size => "300x300" %>
 </div>
@@ -13,19 +14,21 @@
   <div class="left-container">ヒダリ</div>
 
   <div class="center-container">
-    <div class="card">
-      <div class="card__body">
-        <p>
-        <%= link_to "名前", "#", class: :card__user %>が
-        <%= "日時"%>に投稿
-        </p>
-        <div>
-          <%= link_to "タイトル", "#", class: :card__title%>
-          <%= image_tag "grade1_taihenyoku.png", :size => "50x50"%>
+    <% @articles.each do |article| %>
+      <div class="card">
+        <div class="card__body">
+          <p>
+          <%= link_to "名前", "#", class: :card__user %>さんが
+          <%= article.created_at %>に投稿
+          </p>
+          <div>
+            <%= link_to article.title, "#", class: :card__title%>
+            <%= image_tag "grade1_taihenyoku.png", :size => "50x50"%>
+          </div>
+          <div class="card-tag">タグ</div>
         </div>
-        <div class="card-tag">タグ</div>
       </div>
-    </div>
+    <% end %>
   </div>
 
   <div class="right-container">ミギ</div>
