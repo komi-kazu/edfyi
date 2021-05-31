@@ -1,12 +1,21 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .nav{
   height: 40px;
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   font-size: 26px;
   background-color: #F1FFFA;
 
+}
+
+.nav-title{
+  color: #454545;
 }
 
 .search-form{
@@ -18,8 +27,7 @@
 
 }
 
-.nav-post
-.av-new_registration 
-.nav-login{
+a{
+  color: #454545;
   text-decoration: none;
 }
