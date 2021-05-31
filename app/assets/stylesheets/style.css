@@ -1,6 +1,9 @@
 body {
+  height: 100vh;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .nav{
@@ -30,4 +33,42 @@ body {
 a{
   color: #454545;
   text-decoration: none;
+}
+
+.home-container{
+  height:450px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #F1FFFA;
+}
+
+.main-container{
+  width: 100%;
+  padding-top: 30px;
+  background-color: #D5C7BC;
+  display: flex;
+  flex: 1;
+}
+
+.left-container{
+  width: 350px;
+
+}
+
+.center-container{
+  background-color: white;
+  flex: 1;
+
+}
+
+.right-container{
+  width: 350px;
+
+}
+
+footer{
+  padding: 0;
+  margin: 0;
 }
