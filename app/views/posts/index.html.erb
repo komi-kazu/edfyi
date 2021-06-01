@@ -19,7 +19,7 @@
         <div class="card-body">
           <p class="card-date">
           <%= link_to "名前", "#", class: :card__user %>さんが
-          <%= article.created_at %>に投稿
+          <%= article.created_at.strftime '%Y年%-m月%-d日' %>に投稿
           </p>
           <div class="card-title">
             <%= link_to article.title, "#", class: :card__title%>
