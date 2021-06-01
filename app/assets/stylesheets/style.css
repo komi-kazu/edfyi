@@ -1,13 +1,12 @@
 body {
-  height: 100vh;
   margin: 0;
   padding: 0;
   display: flex;
   flex-direction: column;
 }
-
+/* ナビゲーションバー */
 .nav{
-  height: 40px;
+  height: 50px;
   width: 100%;
   display: flex;
   justify-content: space-around;
@@ -34,9 +33,9 @@ a{
   color: #454545;
   text-decoration: none;
 }
-
+/* トップページのサイト説明 */
 .home-container{
-  height:450px;
+  height:400px;
   width: 100%;
   display: flex;
   justify-content: space-around;
@@ -44,6 +43,7 @@ a{
   background-color: #F1FFFA;
 }
 
+/* メイン */
 .main-container{
   width: 100%;
   padding-top: 30px;
@@ -52,23 +52,72 @@ a{
   flex: 1;
 }
 
+/* メインの左 */
 .left-container{
   width: 350px;
 
 }
-
+/* メインの真ん中 */
 .center-container{
-  background-color: white;
+  padding: 0;
   flex: 1;
 
 }
 
+.card{
+  background-color: white;
+  border-radius: 10px;
+  margin-bottom: 5px; 
+}
+
+.card-date{
+  margin: 0 10px;
+  border-bottom:  2px dotted gray;
+}
+
+.card-title{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 10px;
+  font-size: 25px;
+}
+
+.card-tag{
+  margin: 0 10px;
+}
+
+/* メインの右 */
 .right-container{
-  width: 350px;
+  width: 350px; 
 
 }
 
 footer{
   padding: 0;
   margin: 0;
+}
+
+/* 新規投稿ページ */
+.new-post{
+  width: 60%;
+  margin: 30px 100px 0 100px;
+}
+
+.article-title{
+  font-size: 20px;
+  width: 100%;
+}
+
+.article-text{
+  font-size: 20px;
+  width: 100%;
+}
+
+.post-submit{
+
+}
+
+.back-btn{
+
 }

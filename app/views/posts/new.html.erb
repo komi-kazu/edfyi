@@ -1,0 +1,24 @@
+<%= form_with model:@article, url:posts_path, local: true do |f| %>
+
+<%# <%= render 'shared/error_messages', model: f.object %> 
+
+  <div class="new-post">
+    <div class="article-title">
+      <%= f.text_area :title, class:"article-title", id:"article-title", placeholder:"タイトル(40文字まで)", maxlength:"40" %>
+    </div>
+    <div class="article-tag">
+    </div>
+    <div class="article-text">
+      <%= f.text_area :article, class:"article-text", id:"article-text", placeholder:"あなたの教育活動のノウハウや経験を書いてください。(1000文字まで)",rows:"30" ,maxlength:"1000" %>
+    </div>
+
+    <div class="post-submit">
+      <%= f.submit "投稿する" , class:"post-btn" %>
+    </div>
+    <div class="back-btn">
+      <%=link_to 'トップページへもどる', root_path, class:"back-btn" %>
+    </div>
+
+  </div>
+
+<% end %>

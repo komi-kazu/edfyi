@@ -1,13 +1,13 @@
 <div class="home-container">
-  <%= image_tag "b0472.png", :size => "300x300" %>
+  <%= image_tag "b0472.png", :size => "350x350" %>
   <div class="home-container-text">
     <h1>教育は未来だ</h1>
     <p>Edfyiは、学校教育に関する経験やノウハウを記録・共有するサービスです。</p>
     <p>日々の教育活動において、学びになったことや覚えておきたいことを他の</p>
     <p>教育者と共有しましょう。</p>
-    <p>また、教育活動の中で困ったことがあったら質問してみましょう</p>
+    <p>また、教育活動の中で困ったことがあったら質問してみましょう。</p>
   </div>
-  <%= image_tag "b0693.png", :size => "300x300" %>
+  <%= image_tag "b0693.png", :size => "350x350" %>
 </div>
 
 <div class="main-container">
@@ -16,12 +16,12 @@
   <div class="center-container">
     <% @articles.each do |article| %>
       <div class="card">
-        <div class="card__body">
-          <p>
+        <div class="card-body">
+          <p class="card-date">
           <%= link_to "名前", "#", class: :card__user %>さんが
           <%= article.created_at %>に投稿
           </p>
-          <div>
+          <div class="card-title">
             <%= link_to article.title, "#", class: :card__title%>
             <%= image_tag "grade1_taihenyoku.png", :size => "50x50"%>
           </div>
