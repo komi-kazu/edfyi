@@ -3,8 +3,13 @@
     <div class="article-haeder">
       <p>
       <%= link_to "名前", "#" %>さんが
-      <%= article.created_at.strftime '%Y年%-m月%-d日' %>に投稿
+      <%= @article.created_at.strftime '%Y年%-m月%-d日' %>に投稿
       </p>
+      <h2><%= @article.title %></h2>
+    </div>
+    <div class="article-main">
+      <%= @article.article1 %>
+      <%= image_tag @article.image1 %>
     </div>
   </div>
 </div>

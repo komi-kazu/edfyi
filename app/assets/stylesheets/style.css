@@ -99,6 +99,10 @@ footer{
 }
 
 /* 新規投稿ページ */
+.post-container{
+  
+}
+
 .new-post{
   width: 60%;
   margin: 30px 100px 0 100px;
@@ -114,13 +118,19 @@ footer{
   width: 100%;
 }
 
+.article-image{
+  font-size: 20px;
+  width: 100%;
+}
+
 .post-submit{
 
 }
 
-.back-btn{
-
-}
-
 /* 詳細ページ */
-.article-wrapper
+.article-wrapper{
+  width: 60%;
+  margin: 30px 100px 0 100px;
+  border: solid 2px;
+  border-radius: 10px;
+}

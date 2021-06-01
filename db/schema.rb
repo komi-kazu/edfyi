@@ -10,11 +10,51 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_28_150952) do
+ActiveRecord::Schema.define(version: 2021_06_01_071036) do
+
+  create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "record_type", null: false
+    t.bigint "record_id", null: false
+    t.bigint "blob_id", null: false
+    t.datetime "created_at", null: false
+    t.index ["blob_id"], name: "index_active_storage_attachments_on_blob_id"
+    t.index ["record_type", "record_id", "name", "blob_id"], name: "index_active_storage_attachments_uniqueness", unique: true
+  end
+
+  create_table "active_storage_blobs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "key", null: false
+    t.string "filename", null: false
+    t.string "content_type"
+    t.text "metadata"
+    t.bigint "byte_size", null: false
+    t.string "checksum", null: false
+    t.datetime "created_at", null: false
+    t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
+  end
 
   create_table "articles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title", null: false
-    t.text "article", null: false
+    t.text "article1", null: false
+    t.text "image1"
+    t.text "article2"
+    t.text "image2"
+    t.text "article3"
+    t.text "image3"
+    t.text "article4"
+    t.text "image4"
+    t.text "article5"
+    t.text "image5"
+    t.text "article6"
+    t.text "image6"
+    t.text "article7"
+    t.text "image7"
+    t.text "article8"
+    t.text "image8"
+    t.text "article9"
+    t.text "image9"
+    t.text "article10"
+    t.text "image10"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -22,8 +62,28 @@ ActiveRecord::Schema.define(version: 2021_05_28_150952) do
   create_table "questions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title", null: false
     t.text "question", null: false
+    t.text "image1"
+    t.text "question2"
+    t.text "image2"
+    t.text "question3"
+    t.text "image3"
+    t.text "question4"
+    t.text "image4"
+    t.text "question5"
+    t.text "image5"
+    t.text "question6"
+    t.text "image6"
+    t.text "question7"
+    t.text "image7"
+    t.text "question8"
+    t.text "image8"
+    t.text "question9"
+    t.text "image9"
+    t.text "question10"
+    t.text "image10"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
 end

@@ -30,6 +30,6 @@ class PostsController < ApplicationController
   private
 
   def article_params
-    params.require(:article).permit(:title,:article)
+    params.require(:article).permit(:title,:article1,:image1)
   end
 end
