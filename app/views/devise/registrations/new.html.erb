@@ -6,7 +6,7 @@
 
     <div class="field">
       <%= f.label :nickname, "ニックネーム(必須)"%><br />
-      <%= f.email_field :nickname, autofocus: true, autocomplete: "nickname" %>
+      <%= f.text_area :nickname, autofocus: true, autocomplete: "nickname" %>
     </div>
 
     <div class="field">
@@ -29,8 +29,15 @@
     </div>
 
     <div class="field">
-      自分の立場を選んでください(任意)
-      <%# <%= f.collection_select(:, , :id, :name, {}, {class:"select-box", id:""}) %> %>
+      自分の立場を選んでください(任意)<br />
+      <div class="position-selection">
+        <% %w(教員 教育関係者 保護者 その他).each.with_index do |position,i| %>
+          <label>
+            <%= f.check_box :position, {multiple: true}, position, nil %>
+            <%= position %>
+          </label>
+        <% end %>
+      </div>
     </div>
 
     <div class="field">
