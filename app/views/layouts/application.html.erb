@@ -18,9 +18,15 @@
           <%= form.submit "検索", class: "search-btn" %>
           
         <% end %>
+
+        <% if user_signed_in? %>
         <%= link_to "投稿する", new_post_path, class: "nav-post" %>
+        <%= link_to current_user.nickname, "#", class: "greeting__link" %>
+        <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "nav__logout" %>
+        <% else %>
         <%= link_to "新規登録", new_user_registration_path, class: "nav-new_registration" %>
         <%= link_to "ログイン", new_user_session_path, class: "nav-login" %>
+        <% end %>
 
       </div>
 

@@ -23,7 +23,7 @@ class CreateQuestions < ActiveRecord::Migration[6.0]
       t.text :question10
       t.text :image10
       # t.integer :tag, null: false
-      # t.references :user, null: false, foreign_key: true
+      t.references :user, null: false, foreign_key: true
 
       t.timestamps
     end

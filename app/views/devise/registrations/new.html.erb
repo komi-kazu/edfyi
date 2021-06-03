@@ -28,17 +28,19 @@
       <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
     </div>
 
-    <div class="field">
-      自分の立場を選んでください(任意)<br />
-      <div class="position-selection">
-        <% %w(教員 教育関係者 保護者 その他).each.with_index do |position,i| %>
-          <label>
-            <%= f.check_box :position, {multiple: true}, position, nil %>
-            <%= position %>
-          </label>
-        <% end %>
-      </div>
-    </div>
+    <%# <div class="field"> %>
+      <%# 自分の立場を選んでください(任意)<br /> %>
+      <%# <div class="position-selection"> %>
+          <%# <%= f.label "教員 =>" %>
+          <%# <%= f.check_box :position,  id: "check0" %>
+          <%# <%= f.label "教育関係者 =>" %>
+          <%# <%= f.check_box :position, id: "check0" %>
+          <%# <%= f.label "保護者 =>" %> 
+          <%# <%= f.check_box :position, id: "check0" %> 
+          <%# <%= f.label "それ以外 =>" %> 
+          <%# <%= f.check_box :position, id: "check0" %> 
+      <%# </div> %>
+    <%# </div> %>
 
     <div class="field">
       プロフィール(任意)<br />
@@ -50,5 +52,3 @@
     </div>
   <% end %>
 </div>
-
-<%= render "devise/shared/links" %>

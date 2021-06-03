@@ -8,8 +8,21 @@
       <h2><%= @article.title %></h2>
     </div>
     <div class="article-main">
-      <%= @article.article1 %>
+      <%= @article.article1 %><br />
       <%= image_tag @article.image1 %>
+      <%= @article.article2 %>
+      <%= image_tag @article.image2 %>
+      <%= @article.article3 %>
+      <% if @article.image3.present? %>
+      <%= image_tag @article.image3 %>
+      <% end %>
     </div>
   </div>
+  <div class="article-operation">
+    <% if current_user.id == @item.user_id %>
+          <%= link_to "商品の編集", edit_item_path(@item.id), method: :get, class: "item-red-btn" %>
+          <p class="or-text">or</p>
+          <%= link_to "削除", item_path(@item.id), method: :delete, class:"item-destroy" %>
+    <% end %>
+  <div>
 </div>
