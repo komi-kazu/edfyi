@@ -27,9 +27,12 @@ class PostsController < ApplicationController
     @article = Article.find(params[:id])
   end
 
+  def destroy
+  end
+
   private
 
   def article_params
-    params.require(:article).permit(:title,:article1,:image1)
+    params.require(:article).permit(:title,:article1,:image1).merge(user_id: current_user.id)
   end
 end

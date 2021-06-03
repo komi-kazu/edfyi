@@ -9,20 +9,16 @@
     </div>
     <div class="article-main">
       <%= @article.article1 %><br />
+      <% if @article.image1.present? %>
       <%= image_tag @article.image1 %>
-      <%= @article.article2 %>
-      <%= image_tag @article.image2 %>
-      <%= @article.article3 %>
-      <% if @article.image3.present? %>
-      <%= image_tag @article.image3 %>
       <% end %>
     </div>
   </div>
   <div class="article-operation">
-    <% if current_user.id == @item.user_id %>
-          <%= link_to "商品の編集", edit_item_path(@item.id), method: :get, class: "item-red-btn" %>
+    <% if current_user.id == @article.user_id %>
+          <%= link_to "商品の編集", edit_post_path(@article.id), method: :get, class: "item-red-btn" %>
           <p class="or-text">or</p>
-          <%= link_to "削除", item_path(@item.id), method: :delete, class:"item-destroy" %>
+          <%= link_to "削除", post_path(@article.id), method: :delete, class:"item-destroy" %>
     <% end %>
   <div>
 </div>
