@@ -1,4 +1,4 @@
-class PostsController < ApplicationController
+class ArticlesController < ApplicationController
 
   def index
     @articles = Article.includes(:user).order("created_at DESC")
@@ -25,6 +25,8 @@ class PostsController < ApplicationController
 
   def show
     @article = Article.find(params[:id])
+    @comment = ArticleComment.new
+    @comments = @article.article_comments.includes(:user)
   end
 
   def destroy
