@@ -36,25 +36,26 @@ ActiveRecord::Schema.define(version: 2021_06_03_023306) do
   create_table "articles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title", null: false
     t.text "article1", null: false
-    t.text "image1"
+    t.text "image1_id"
     t.text "article2"
-    t.text "image2"
+    t.text "image2_id"
     t.text "article3"
-    t.text "image3"
+    t.text "image3_id"
     t.text "article4"
-    t.text "image4"
+    t.text "image4_id"
     t.text "article5"
-    t.text "image5"
+    t.text "image5_id"
     t.text "article6"
-    t.text "image6"
+    t.text "image6_id"
     t.text "article7"
-    t.text "image7"
+    t.text "image7_id"
     t.text "article8"
-    t.text "image8"
+    t.text "image8_id"
     t.text "article9"
-    t.text "image9"
+    t.text "image9_id"
     t.text "article10"
-    t.text "image10"
+    t.text "image10_id"
+    t.text "article11"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -64,25 +65,25 @@ ActiveRecord::Schema.define(version: 2021_06_03_023306) do
   create_table "questions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title", null: false
     t.text "question", null: false
-    t.text "image1"
+    t.text "image1_id"
     t.text "question2"
-    t.text "image2"
+    t.text "image2_id"
     t.text "question3"
-    t.text "image3"
+    t.text "image3_id"
     t.text "question4"
-    t.text "image4"
+    t.text "image4_id"
     t.text "question5"
-    t.text "image5"
+    t.text "image5_id"
     t.text "question6"
-    t.text "image6"
+    t.text "image6_id"
     t.text "question7"
-    t.text "image7"
+    t.text "image7_id"
     t.text "question8"
-    t.text "image8"
+    t.text "image8_id"
     t.text "question9"
-    t.text "image9"
+    t.text "image9_id"
     t.text "question10"
-    t.text "image10"
+    t.text "image10_id"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
