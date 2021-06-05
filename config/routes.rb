@@ -4,6 +4,9 @@ Rails.application.routes.draw do
 
   resources :articles do
     resources :article_comments, only: :create
+    collection do
+      get 'search'
+    end
   end
   resources :users
 end

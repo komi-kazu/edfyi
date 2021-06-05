@@ -84,8 +84,8 @@
     <div class="article-operation">
       <% if user_signed_in? %>
         <% if current_user.id == @article.user_id %>
-              <%= link_to "記事の編集", edit_post_path(@article.id), method: :get, class: "item-red-btn" %>
-              <%= link_to "記事の削除", post_path(@article.id), method: :delete, class:"item-destroy" %>
+              <%= link_to "記事の編集", edit_article_path(@article.id), method: :get, class: "item-red-btn" %>
+              <%= link_to "記事の削除", article_path(@article.id), method: :delete, class:"item-destroy" %>
         <% end %>
       <% end %>
     </div>

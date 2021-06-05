@@ -32,6 +32,10 @@ class ArticlesController < ApplicationController
   def destroy
   end
 
+  def search
+    @articles = Article.search(params[:keyword])
+  end
+
   private
 
   def article_params
