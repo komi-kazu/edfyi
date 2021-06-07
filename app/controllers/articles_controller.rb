@@ -10,6 +10,8 @@ class ArticlesController < ApplicationController
 
   def create
     @article = Article.new(article_params)
+    tag_list = params[:article][:tag_names].split(",")
+    @article.tags_save(tag_list) 
     if @article.save
       redirect_to root_path
     else

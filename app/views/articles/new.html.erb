@@ -83,6 +83,11 @@
         <%= f.text_area :article11, class:"article-text", id:"article-text", placeholder:"あなたの教育活動のノウハウや経験を書いてください。(1000文字まで)",rows:"10" ,maxlength:"1000", size: "x10" %>
       </div>
 
+      <div class="field">
+        <%= f.label :tag_names %>
+        <%= f.text_field :tag_names, placeholder:"複数つけたい場合は「,」で区切ってください" %>
+      </div>
+
       <div class="post-submit">
         <%= f.submit "投稿する" , class:"post-btn" %>
       </div>
