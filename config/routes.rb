@@ -8,5 +8,10 @@ Rails.application.routes.draw do
       get 'search'
     end
   end
+
   resources :users
+
+  resources :tags do
+    get 'articles', to: 'articles#search'
+  end
 end

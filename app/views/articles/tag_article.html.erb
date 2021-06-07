@@ -10,11 +10,7 @@
             <%= link_to article.title, article_path(article.id), class: :card__title%>
             <%= image_tag "grade1_taihenyoku.png", :size => "50x50"%>
           </div>
-          <div class="card-tag">
-            <% article.tags.each do |tag| %>
-              <%= link_to "##{tag.tag_name}", search_articles_path(keyword: tag.tag_name) %>
-            <%end%>
-          </div>
+          <div class="card-tag">タグ</div>
         </div>
       </div>
     <% end %>

@@ -27,7 +27,7 @@
           </div>
           <div class="card-tag">
             <% article.tags.each do |tag| %>
-              #<%= tag.tag_name %>
+              <%= link_to "##{tag.tag_name}", tag_articles_path(tag_id: tag.id) %>
             <%end%>
           </div>
         </div>
