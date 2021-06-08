@@ -16,6 +16,8 @@ class Article < ApplicationRecord
   validates :title,presence: true
   validates :article1,presence: true
 
+  acts_as_taggable
+
   def self.search(search)
     if search != ""
       Article.where('title LIKE(?) ', "%#{search}%")
