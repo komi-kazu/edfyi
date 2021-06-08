@@ -1,6 +1,7 @@
 class Article < ApplicationRecord
   belongs_to :user
   has_many :article_comments
+  has_many :likes
 
   attachment :image1
   attachment :image2
