@@ -10,9 +10,9 @@
         <% end %>
       </div>
       </p>
-      <tr id="article_<%= @article.id %>">
-        <%= render partial: 'like', article: @article %>
-      </tr>
+      <div id="like-btn-<%= @article.id %>">
+        <%= render 'like', article: @article %>
+      </div>
       <h2><%= @article.title %></h2>
     </div>
     <div class="article-main">

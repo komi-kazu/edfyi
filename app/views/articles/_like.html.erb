@@ -1,5 +1,15 @@
-<% if current_user.liked_by?(@article.id) %>
-  <td><%= link_to 'いいねを外す', destroy_like_path(@article), method: :DELETE, remote: true %><%= @article.likes.count %></td>
+<% if current_user.liked_by?(article.id) %>
+  <td>
+    <%= link_to destroy_like_path(article), method: :DELETE, remote: true, id: :"like-button-#{article.id}" do%>
+      <%= image_tag "grade1_taihenyoku.png", :size => "50x50" %>
+    <% end %>
+    <%= "x#{article.likes.count}" %>
+  </td>
 <% else %>
-  <td><%= link_to 'いいね', create_like_path(@article), method: :POST, remote: true %><%= @article.likes.count %></td>
+  <td>
+  <%= link_to  create_like_path(article), method: :POST, remote: true, id: :"like-button-#{article.id}" do%>
+  <%= image_tag 'YtNiVPDo1EGfX471623151976_1623152119.png', :size => "50x50" %>
+  <% end %>
+  <%= "x#{article.likes.count}" %>
+  </td>
 <% end %>
