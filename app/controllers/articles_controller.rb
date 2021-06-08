@@ -1,9 +1,10 @@
 class ArticlesController < ApplicationController
 
   def index
+    # @articles = Article.includes(:user,params[:id]).order("articles.created_at DESC")
     @articles = Article.includes(:user).order("created_at DESC")
     if params[:tag_name]
-      @articles = Article.tagged_with("#{params[:tag_name]}")
+      @articles = Article.tagged_with("#{params[:tag_name]}").order("created_at DESC")
     end
   end
 

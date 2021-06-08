@@ -85,7 +85,7 @@
 
       <div class="tag">
         <% f.label :tag_list %>
-        <% f.text_field :tag_list, value: @task.tag_list.join(',') %>
+        <%= f.text_field :tag_list, value:@article.tag_list.join(',') %>
       </div>
 
       <div class="post-submit">
