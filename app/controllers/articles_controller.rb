@@ -14,6 +14,8 @@ class ArticlesController < ApplicationController
 
   def create
     @article = Article.new(article_params)
+    tag_list = params[:article][:tag_names].split(",")
+    @article.tags_save(tag_list) 
     if @article.save
       redirect_to root_path
     else
@@ -47,8 +49,17 @@ class ArticlesController < ApplicationController
   end
 
   def search
-    @articles = Article.search(params[:keyword])
+    # @articles = Article.search(params[:keyword])
+    # if (params[:keyword])[0] == '#'
+      # @articles = Tag.search(params[:keyword]).order('created_at DESC')
+      @tag_list = Tag.all  #こっちの投稿一覧表示ページでも全てのタグを表示するために、タグを全取得
+      @tag = Tag.find(params[:tag_id])  #クリックしたタグを取得
+      @articles = @tag.articles.all  
+    # else
+      @articles = Article.search(params[:keyword]).order('created_at DESC')
+    # end
   end
+
 
   private
 

@@ -8,6 +8,7 @@ Rails.application.routes.draw do
       get 'search'
     end
   end
+
   resources :users
 
   post 'like/:id' => 'likes#create', as: 'create_like'
