@@ -1,19 +1,21 @@
 <div class="detail-main">
   <div class="article-wrapper">
     <div class="article-haeder">
-      <p>
-      <%= link_to @article.user.nickname, user_path(@article.user.id) %>さんが
-      <%= @article.created_at.strftime '%Y年%-m月%-d日' %>に投稿
-      </p>
-      <div class="like-btn" id="like-btn-<%= @article.id %>">
-        <%= render 'like', article: @article %>
+      <div class="article-header-top">
+        <p>
+        <%= link_to @article.user.nickname, user_path(@article.user.id) %>さんが
+        <%= @article.created_at.strftime '%Y年%-m月%-d日' %>に投稿
+        </p>
+        <div class="like-btn" id="like-btn-<%= @article.id %>">
+          <%= render 'like', article: @article %>
+        </div>
       </div>
-      <div class="card-tag">
+      <h2><%= @article.title %></h2>
+      <div class="show-card-tag">
         <% @article.tag_list.each do |tag| %>
           <%= link_to "##{tag}", articles_path(tag_name: tag) %>
         <% end %>
       </div>
-      <h2><%= @article.title %></h2>
     </div>
 
     <div class="article-main">

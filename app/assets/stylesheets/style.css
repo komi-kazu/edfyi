@@ -83,6 +83,12 @@ a{
   font-size: 25px;
 }
 
+.card-title-rigth{
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+}
+
 .card-tag{
   margin: 0 10px;
 }
@@ -144,6 +150,10 @@ footer{
   background-color: white;
 }
 
+.article-header{
+  margin-top: 10px;
+}
+
 .article-footer{
   width: 60%;
   margin: 30px 100px 30px 100px;
@@ -152,5 +162,16 @@ footer{
 }
 
 .like-btn{
+  align-items: center;
   margin-left: 220px;
+}
+
+.show-card-tag{
+  margin-bottom: 15px;
+}
+
+.article-header-top{
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
 }
