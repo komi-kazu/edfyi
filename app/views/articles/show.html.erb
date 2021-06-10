@@ -2,19 +2,20 @@
   <div class="article-wrapper">
     <div class="article-haeder">
       <p>
-      <%= link_to "名前", "#" %>さんが
+      <%= link_to @article.user.nickname, user_path(@article.user.id) %>さんが
       <%= @article.created_at.strftime '%Y年%-m月%-d日' %>に投稿
+      </p>
+      <div class="like-btn" id="like-btn-<%= @article.id %>">
+        <%= render 'like', article: @article %>
+      </div>
       <div class="card-tag">
         <% @article.tag_list.each do |tag| %>
           <%= link_to "##{tag}", articles_path(tag_name: tag) %>
         <% end %>
       </div>
-      </p>
-      <div id="like-btn-<%= @article.id %>">
-        <%= render 'like', article: @article %>
-      </div>
       <h2><%= @article.title %></h2>
     </div>
+
     <div class="article-main">
       <%= @article.article1 %><br />
       <% if @article.image1.present? %>
@@ -89,6 +90,8 @@
       <% end %>
     </div>
   </div>
+
+  <div class="article-footer">
     <div class="article-operation">
       <% if user_signed_in? %>
         <% if current_user.id == @article.user_id %>
@@ -98,14 +101,6 @@
       <% end %>
     </div>
     <div class="comments-container">
-      <% if user_signed_in? %>
-        <%= form_with(model: [@article,@comment], local: true) do |form| %>
-          <%= form.text_area :text, placeholder: "コメントする", rows: "2" %>
-          <%= form.submit "SEND" %>
-        <% end %>
-      <% else %>
-        <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
-      <% end %>
       <div class="comments">
         <h4>＜コメント一覧＞</h4>
         <% @comments.each do |comment| %>
@@ -115,5 +110,14 @@
           </p>
         <% end %>
       </div>
+      <% if user_signed_in? %>
+        <%= form_with(model: [@article,@comment], local: true) do |form| %>
+          <%= form.text_area :text, placeholder: "コメントする", rows: "2", size: "70x5" %>
+          <%= form.submit "SEND" %>
+        <% end %>
+      <% else %>
+        <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
+      <% end %>
     </div>
+  </div>
 </div>
