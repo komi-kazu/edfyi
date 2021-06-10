@@ -116,11 +116,13 @@ footer{
 .article-text{
   font-size: 20px;
   width: 100%;
+  margin-top: 10px;
 }
 
 .article-image{
   font-size: 20px;
   width: 100%;
+  margin-top: 0px;
 }
 
 .post-submit{
