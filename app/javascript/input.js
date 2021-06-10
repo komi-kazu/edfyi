@@ -21,6 +21,15 @@ window.addEventListener('load', () => {
   const imagej = document.getElementById("image_j");
 
   const articlebOriginal = articleb.style.display;
+  const articlecOriginal = articleb.style.display;
+  const articledOriginal = articleb.style.display;
+  const articleeOriginal = articleb.style.display;
+  const articlefOriginal = articleb.style.display;
+  const articlegOriginal = articleb.style.display;
+  const articlehOriginal = articleb.style.display;
+  const articleiOriginal = articleb.style.display;
+  const articlejOriginal = articleb.style.display;
+  const articlekOriginal = articleb.style.display;
 
   articleb.style.display = 'none';
   articlec.style.display = 'none';
@@ -35,6 +44,32 @@ window.addEventListener('load', () => {
 
   imagea.addEventListener('change', () => {
     articleb.style.display = articlebOriginal;
-
+ })
+  imageb.addEventListener('change', () => {
+    articlec.style.display = articlecOriginal;
+ })
+  imagec.addEventListener('change', () => {
+    articled.style.display = articledOriginal;
+ })
+  imaged.addEventListener('change', () => {
+    articlee.style.display = articleeOriginal;
+ })
+  imagee.addEventListener('change', () => {
+    articlef.style.display = articlefOriginal;
+ })
+  imagef.addEventListener('change', () => {
+    articleg.style.display = articlegOriginal;
+ })
+  imageg.addEventListener('change', () => {
+    articleh.style.display = articlehOriginal;
+ })
+  imageh.addEventListener('change', () => {
+    articlei.style.display = articleiOriginal;
+ })
+  imagei.addEventListener('change', () => {
+    articlej.style.display = articlejOriginal;
+ })
+  imagej.addEventListener('change', () => {
+    articlek.style.display = articlekOriginal;
  })
 });
