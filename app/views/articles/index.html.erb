@@ -1,3 +1,4 @@
+<% unless user_signed_in? %>
 <div class="home-container">
   <%= image_tag "b0472.png", :size => "350x350" %>
   <div class="home-container-text">
@@ -9,6 +10,7 @@
   </div>
   <%= image_tag "b0693.png", :size => "350x350" %>
 </div>
+<% end %>
 
 <div class="main-container">
   <div class="left-container"></div>
