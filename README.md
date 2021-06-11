@@ -35,7 +35,7 @@
 * VScode
 * Ruby
 * Rails
-* mysql
+* mysql2
 * JavaScript
 * heroku
 
