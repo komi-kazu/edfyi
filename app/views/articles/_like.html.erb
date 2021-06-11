@@ -1,15 +1,22 @@
-<% if current_user.liked_by?(article.id) %>
-  <td>
-    <%= link_to destroy_like_path(article), method: :DELETE, remote: true, id: :"like-button-#{article.id}" do%>
-      <%= image_tag "grade1_taihenyoku.png", :size => "50x50" %>
+<% if user_signed_in? %>
+  <% if current_user.liked_by?(article.id) %>
+    <td>
+      <%= link_to destroy_like_path(article), method: :DELETE, remote: true, id: :"like-button-#{article.id}" do%>
+        <%= image_tag "grade1_taihenyoku.png", :size => "50x50" %>
+      <% end %>
+      <%= "x#{article.likes.count}" %>
+    </td>
+  <% else %>
+    <td>
+    <%= link_to  create_like_path(article), method: :POST, remote: true, id: :"like-button-#{article.id}" do%>
+    <%= image_tag 'YtNiVPDo1EGfX471623151976_1623152119.png', :size => "50x50" %>
     <% end %>
     <%= "x#{article.likes.count}" %>
-  </td>
-<% else %>
-  <td>
-  <%= link_to  create_like_path(article), method: :POST, remote: true, id: :"like-button-#{article.id}" do%>
-  <%= image_tag 'YtNiVPDo1EGfX471623151976_1623152119.png', :size => "50x50" %>
+    </td>
   <% end %>
-  <%= "x#{article.likes.count}" %>
-  </td>
+<% else%>
+  <div class="card-title-rigth">
+              <%= image_tag "grade1_taihenyoku.png", :size => "50x50"%>
+              <%= "x#{article.likes.count}" %>
+            </div>
 <% end %>
