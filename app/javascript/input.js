@@ -21,15 +21,15 @@ window.addEventListener('load', () => {
   const imagej = document.getElementById("image_j");
 
   const articlebOriginal = articleb.style.display;
-  const articlecOriginal = articleb.style.display;
-  const articledOriginal = articleb.style.display;
-  const articleeOriginal = articleb.style.display;
-  const articlefOriginal = articleb.style.display;
-  const articlegOriginal = articleb.style.display;
-  const articlehOriginal = articleb.style.display;
-  const articleiOriginal = articleb.style.display;
-  const articlejOriginal = articleb.style.display;
-  const articlekOriginal = articleb.style.display;
+  const articlecOriginal = articlec.style.display;
+  const articledOriginal = articled.style.display;
+  const articleeOriginal = articlee.style.display;
+  const articlefOriginal = articlef.style.display;
+  const articlegOriginal = articleg.style.display;
+  const articlehOriginal = articleh.style.display;
+  const articleiOriginal = articlei.style.display;
+  const articlejOriginal = articlej.style.display;
+  const articlekOriginal = articlek.style.display;
 
   articleb.style.display = 'none';
   articlec.style.display = 'none';
