@@ -20,6 +20,8 @@
 
 ## App URL
 
+https://edfyi.herokuapp.com/
+
 ## DEMO
 
 ### 記事詳細ページ
