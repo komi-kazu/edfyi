@@ -191,6 +191,13 @@ footer{
   padding-right: 20px;
 }
 
+/* 新規登録ページ */
+.registrations-wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
 /* ログインページ */
 .sessions-wrapper{
   display: flex;
@@ -198,3 +205,4 @@ footer{
   align-items: center;
   height: 80vh;
 }
+
