@@ -1,29 +1,33 @@
-<div class="user-profile-contaner">
-  <h2><%= "#{@user.nickname}さんのプロフィール" %></h2>
-  <%= @user.profile%>
-</div>
+<div class="wrapper">
+<div class="user-show-wrapper">
+  <div class="user-profile-contaner">
+    <h2><%= "#{@user.nickname}さんのプロフィール" %></h2>
+    <%= @user.profile%>
+  </div>
 
-<h2><%= "#{@user.nickname}さんの投稿" %></h2>
-<div class="center-container">
-    <% @articles.each do |article| %>
-      <div class="card">
-        <div class="card-body">
-          <p class="card-date">
-          <%= article.created_at.strftime '%Y年%-m月%-d日' %>に投稿
-          </p>
-          <div class="card-title">
-            <%= link_to article.title, article_path(article.id), class: :card__title%>
-            <div class="card-title-rigth">
-              <%= image_tag "grade1_taihenyoku.png", :size => "50x50"%>
-              <%= "x#{article.likes.count}" %>
+  <h2><%= "#{@user.nickname}さんの投稿" %></h2>
+  <div class="center-container">
+      <% @articles.each do |article| %>
+        <div class="card">
+          <div class="card-body">
+            <p class="card-date">
+            <%= article.created_at.strftime '%Y年%-m月%-d日' %>に投稿
+            </p>
+            <div class="card-title">
+              <%= link_to article.title, article_path(article.id), class: :card__title%>
+              <div class="card-title-rigth">
+                <%= image_tag "grade1_taihenyoku.png", :size => "50x50"%>
+                <%= "x#{article.likes.count}" %>
+              </div>
+            </div>
+            <div class="card-tag">
+              <% article.tag_list.each do |tag| %>
+                <%= link_to "##{tag}", articles_path(tag_name: tag) %>
+              <% end %>
             </div>
           </div>
-          <div class="card-tag">
-            <% article.tag_list.each do |tag| %>
-              <%= link_to "##{tag}", articles_path(tag_name: tag) %>
-            <% end %>
-          </div>
         </div>
-      </div>
-    <% end %>
+      <% end %>
+  </div>
+</div>
 </div>

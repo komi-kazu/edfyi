@@ -175,3 +175,17 @@ footer{
   align-items: center;
   margin-top: 10px;
 }
+
+/* ユーザーページ */
+.wrapper{
+  background-color: #D5C7BC;
+
+}
+
+.user-show-wrapper{
+  width: 70%;
+  background-color: white;
+  border-radius: 10px;
+  margin-left: 30px;
+  padding-left: 20px;
+}
