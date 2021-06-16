@@ -36,7 +36,7 @@ https://edfyi.herokuapp.com/
 ## 使用言語・技術
 * VScode
 * Ruby
-* Rails
+* Rails(使用Gem:devise,refile,acts-as-taggable-on,rspec,factory_bot,faker)
 * mysql2
 * JavaScript
 * heroku
