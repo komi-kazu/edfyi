@@ -4,6 +4,10 @@ body {
   display: flex;
   flex-direction: column;
 }
+
+footer{
+  text-align: center;
+}
 /* ナビゲーションバー */
 .nav{
   height: 50px;
