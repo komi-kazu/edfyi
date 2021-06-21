@@ -201,6 +201,8 @@ footer{
   justify-content: center;
   align-items: center;
   height: 85vh;
+  background-color: #D5C7BC;
+
 }
 /* ログインページ */
 .sessions-wrapper{
@@ -208,6 +210,7 @@ footer{
   justify-content: center;
   align-items: center;
   height: 85vh;
+  background-color: #D5C7BC;
 
 }
 
