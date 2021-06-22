@@ -50,14 +50,14 @@ class ArticlesController < ApplicationController
 
   def search
     # @articles = Article.search(params[:keyword])
-    # if (params[:keyword])[0] == '#'
-      # @articles = Tag.search(params[:keyword]).order('created_at DESC')
+    if (params[:keyword])[0] == '#'
+      @articles = Tag.search(params[:keyword]).order('created_at DESC')
       @tag_list = Tag.all  #こっちの投稿一覧表示ページでも全てのタグを表示するために、タグを全取得
       @tag = Tag.find(params[:tag_id])  #クリックしたタグを取得
       @articles = @tag.articles.all  
-    # else
+    else
       @articles = Article.search(params[:keyword]).order('created_at DESC')
-    # end
+    end
   end
 
 
