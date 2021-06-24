@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: edfyi_production
-  username: edfyi
-  password: <%= ENV['EDFYI_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
