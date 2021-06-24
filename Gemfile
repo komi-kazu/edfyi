@@ -70,3 +70,7 @@ gem "refile", require: "refile/rails", github: 'manfe/refile'
 gem "refile-mini_magick"
 
 gem 'acts-as-taggable-on', '~> 6.0'
+
+group :production do
+  gem 'unicorn', '5.4.1'
+end
