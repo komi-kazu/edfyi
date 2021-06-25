@@ -18,9 +18,9 @@
 
 これらの課題を解決する手段としてEdfyiを作りました。
 
-## App URL
+## App IP アドレス
 
-https://edfyi.herokuapp.com/
+35.75.50.222
 
 ## DEMO
 
@@ -39,7 +39,8 @@ https://edfyi.herokuapp.com/
 * Rails(使用Gem:devise,refile,acts-as-taggable-on,rspec,factory_bot,faker)
 * mysql2
 * JavaScript
-* heroku
+* AWS(EC2)
+* Capistrano
 
 ## DB設計
 * usersテーブル  
