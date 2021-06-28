@@ -1,0 +1,38 @@
+version: '3'
+services:
+  db:
+    platform: linux/x86_64
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_USER: user
+      MYSQL_PASSWORD: 1234
+      MYSQL_DATABASE: edfyi_db
+    volumes:
+      - mysql-data:/var/lib/mysql
+    ports:
+      - "4306:3306"
+
+  app:
+    build: .
+    command: bundle exec puma -C config/puma.rb
+    volumes:
+      - .:/edfyi
+      - public-data:/edfyi/public
+      - tmp-data:/edfyi/tmp
+      - log-data:/edfyi/log
+
+  web:
+    build:
+      context: containers/nginx
+    volumes:
+      - public-data:/edfyi/public
+      - tmp-data:/edfyi/tmp
+    ports:
+      - 80:80
+
+volumes:
+  mysql-data:
+  public-data:
+  tmp-data:
+  log-data:
