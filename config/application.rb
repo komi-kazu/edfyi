@@ -19,3 +19,4 @@ module Edfyi
     config.time_zone = 'Tokyo' 
   end
 end
+
