@@ -14,17 +14,16 @@ class Article < ApplicationRecord
   attachment :image9
   attachment :image10
 
-  validates :title,presence: true
-  validates :article1,presence: true
+  validates :title, presence: true
+  validates :article1, presence: true
 
   acts_as_taggable
 
   def self.search(search)
-    if search != ""
+    if search != ''
       Article.where('title LIKE(?) ', "%#{search}%")
     else
       Article.all
     end
   end
-
 end

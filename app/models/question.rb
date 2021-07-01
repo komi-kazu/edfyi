@@ -9,8 +9,7 @@ class Question < ApplicationRecord
   attachment :image8
   attachment :image9
   attachment :image10
-  
-  validates :title,presence: true
-  validates :question1,presence: true
 
+  validates :title, presence: true
+  validates :question1, presence: true
 end

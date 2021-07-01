@@ -11,7 +11,7 @@ class LikesController < ApplicationController
     redirect_to article_path
   end
 
-private
+  private
 
   def article_params
     @article = Article.find(params[:id])
