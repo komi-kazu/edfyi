@@ -18,9 +18,9 @@
 
 これらの課題を解決する手段としてEdfyiを作りました。
 
-## App IP アドレス
+## App URL
 
-35.75.50.222
+portfolio.edfyi.net
 
 ## DEMO
 
