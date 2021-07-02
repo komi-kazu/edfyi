@@ -81,3 +81,7 @@ jobs:
       - add_ssh_keys:
           fingerprints:
             - "13:8f:27:35:f1:59:5a:3c:fe:24:44:fb:4b:f5:81:65"
+
+      - deploy:
+          name: Capistrano deploy
+          command: bundle exec cap production deploy
