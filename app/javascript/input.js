@@ -9,6 +9,7 @@ window.addEventListener('load', () => {
   const articlei = document.getElementById("article_i");
   const articlej = document.getElementById("article_j");
   const articlek = document.getElementById("article_k");
+  
   const imagea = document.getElementById("image_a");
   const imageb = document.getElementById("image_b");
   const imagec = document.getElementById("image_c");
