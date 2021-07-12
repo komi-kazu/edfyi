@@ -53,7 +53,7 @@ http://portfolio.edfyi.net
 ## DEMO
 
 ### 記事詳細ページ
-
+[![Image from Gyazo](https://i.gyazo.com/286b2473c9024c3696e14141ebcba097.gif)](https://gyazo.com/286b2473c9024c3696e14141ebcba097)
 
 ### タグ検索機能
 [![Image from Gyazo](https://i.gyazo.com/a4378066c25f83734e37e98528bfccdf.gif)](https://gyazo.com/a4378066c25f83734e37e98528bfccdf)
