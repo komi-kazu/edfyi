@@ -20,7 +20,35 @@
 
 ## App URL
 
-portfolio.edfyi.net
+http://portfolio.edfyi.net
+
+## 使用言語・技術
+* VScode
+* Ruby
+* Rails(使用Gem:devise,refile,acts-as-taggable-on,factory_bot,faker etc)
+* mysql2(mariadb)
+* JavaScript
+* RSpec(テスティングフレームワーク)
+* RuboCop(自動コード解析)
+* Docker(開発環境)
+* AWS(EC2、Route53)
+* CircleCI(自動テスト)
+* Capistrano(自動デプロイ)
+
+## 機能一覧
+| 機能                 | 概要                                                               |
+|----------------------|--------------------------------------------------------------------|
+| ユーザー管理機能     | 新規登録・ログイン・ログアウトが可能                               |
+| 投稿機能             | 画像付きで記事投稿が可能                                           |
+| 投稿一覧表示機能     | 記事タイトルの一覧が閲覧可能                                       |
+| 投稿詳細表示機能     | 各投稿詳細が詳細ページで閲覧可能                                   |
+| 投稿編集・削除機能   | 投稿者本人のみ投稿編集・削除が可能                                 |
+| ユーザー詳細表示機能 | 各ユーザーのプロフィール・投稿一覧が閲覧可能                       |
+| ユーザー情報編集機能 | ログイン中のユーザーでアカウント本人であればプロフィール編集が可能 |
+| コメント機能         | 投稿詳細ページからコメントが可能                                   |
+| 投稿検索機能         | 記事のタイトルからの検索可能                                       |
+| タグ付け機能         | 記事へのタグ付け・タグ検索が可能                                   |
+| LIKE機能             | 各投稿へLIKE(よくできました)をつけることが可能                     |
 
 ## DEMO
 
@@ -33,14 +61,6 @@ portfolio.edfyi.net
 ### よくできました(いいね)機能
 [![Image from Gyazo](https://i.gyazo.com/217fefa7fa9c4f141a8f65158cde10f1.gif)](https://gyazo.com/217fefa7fa9c4f141a8f65158cde10f1)
 
-## 使用言語・技術
-* VScode
-* Ruby
-* Rails(使用Gem:devise,refile,acts-as-taggable-on,rspec,factory_bot,faker)
-* mysql2
-* JavaScript
-* AWS(EC2)
-* Capistrano
 
 ## DB設計
 * usersテーブル  
