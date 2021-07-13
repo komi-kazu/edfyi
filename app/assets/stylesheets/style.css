@@ -65,9 +65,11 @@ footer{
   height: 30px;
 
 }
-
 .search-input{
-
+  height: 30px;
+}
+.search-btn{
+  height: 30px;
 }
 
 a{
