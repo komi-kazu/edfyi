@@ -25,7 +25,7 @@
           </p>
           <div class="card-title">
             <div class="card-title-left">
-              <%= link_to article.title, article_path(article.id), class: :card__title%>
+              <%= link_to article.title, article_path(article.id), class: :card__title %>
             </div>
             <div class="card-title-rigth">
               <%= image_tag "grade1_taihenyoku.png", :size => "50x50"%>
@@ -34,7 +34,7 @@
           </div>
           <div class="card-tag">
             <% article.tag_list.each do |tag| %>
-            <%= link_to "##{tag}", articles_path(tag_name: tag) %>
+            <%= link_to "##{tag}", articles_path(tag_name: tag), class: :card__tag %>
             <% end %>
           </div>
         </div>

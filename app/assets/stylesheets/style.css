@@ -107,6 +107,11 @@ a{
   background-color: #D5C7BC;
   display: flex;
   flex: 1;
+}
+
+.card__user,
+.card__title,
+.card__tag{
   text-decoration: none;
   color: #454545;
 }
