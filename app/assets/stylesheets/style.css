@@ -63,13 +63,15 @@ footer{
 
 .search-form{
   height: 30px;
-
+  text-align: center;
 }
 .search-input{
   height: 30px;
+  font-size: 20px;
 }
 .search-btn{
   height: 30px;
+  font-size: 20px;
 }
 
 a{
