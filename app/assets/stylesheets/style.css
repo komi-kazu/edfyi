@@ -107,6 +107,8 @@ a{
   background-color: #D5C7BC;
   display: flex;
   flex: 1;
+  text-decoration: none;
+  color: #454545;
 }
 
 /* メインの左 */
